@@ -6,7 +6,7 @@
 <title>Trading Radar</title>
 <style>
   :root{--bg:#0d0f14;--surface:#161a22;--surface2:#1e2330;--border:#2a2f3d;--text:#e8eaf0;--muted:#7a8099;
-  --green:#00d084;--red:#ff4d6d;--yellow:#fbbf24;--blue:#60a5fa;--purple:#a78bfa;--orange:#fb923c;}
+  --green:#00d084;--red:#ff4d6d;--yellow:#fbbf24;--blue:#60a5fa;--purple:#a78bfa;--orange:#fb923c;--pink:#f472b6;}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif}
   header{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:1px solid var(--border);background:var(--surface)}
@@ -43,6 +43,8 @@
   .card.lvl{border-left-color:var(--yellow)}
   .card.evt{border-left-color:var(--blue)}
   .card.no{border-left-color:var(--muted);opacity:.72}
+  .card.spec{border-left-color:var(--pink);background:rgba(244,114,182,.04)}
+  .spec-empty{color:var(--muted);font-size:.8rem;padding:10px 0}
   .c-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:3px}
   .tk{font-size:.95rem;font-weight:700}
   .cat{font-size:.6rem;padding:2px 6px;border-radius:4px;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
@@ -266,6 +268,32 @@
     </div>
   </div>
 
+  <!-- SPEKULATIV -->
+  <div style="background:var(--surface);border:1px solid rgba(244,114,182,.25);border-radius:12px;padding:18px 20px;margin-bottom:24px">
+    <div class="col-title" style="margin-bottom:6px;border-bottom:2px solid rgba(244,114,182,.25)">
+      <div class="dot" style="background:var(--pink)"></div>
+      <span style="color:var(--pink)">🎲 Spekulativ</span><span class="col-count">0</span>
+    </div>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px;line-height:1.5">
+      Kleine, dünn gehandelte Werte mit hoher Schwankungsbreite (Chancen wie Risiken). Nur Kandidaten, die recherchiert und für plausibel befunden wurden — keine reinen Volumen-/Hype-Meldungen. Max. 0,25% Risiko statt 1%, Stop ist auch hier Pflicht.
+    </div>
+    <div class="spec-empty">Aktuell kein recherchierter Kandidat — wird nicht künstlich befüllt, nur weil die Spalte sonst leer bleibt.</div>
+    <!-- Beispiel-Kartenstruktur für künftige Kandidaten:
+    <div class="card spec">
+      <div class="c-top"><span class="tk">TICKER</span><span class="cat reb" style="background:rgba(244,114,182,.13);color:var(--pink)">Spekulativ</span></div>
+      <div class="co">Kurzbeschreibung Geschäftsmodell</div>
+      <div class="px">X,XX € <small>Quelle</small></div>
+      <div class="setup">
+        <div class="su"><div class="su-l">Einstieg</div><div class="su-v">X,XX €</div></div>
+        <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">X,XX €</div></div>
+        <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">X,XX €</div></div>
+        <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">X,X</div></div>
+      </div>
+      <div class="note">Recherche-Begründung: warum plausibel (echter Katalysator, reales Geschäft, keine Pump-Anzeichen) + was dagegen spricht.</div>
+    </div>
+    -->
+  </div>
+
   <!-- BOTTOM -->
   <div class="bot">
     <div class="panel">
@@ -295,7 +323,8 @@
         <b>5.</b> Kurssprüngen nicht hinterherlaufen — Konsolidierung abwarten.<br>
         <b>6.</b> Max. 2 Positionen im selben Thema (Cluster-Risiko).<br>
         <b>7.</b> Stop wird nachgezogen, nie zurückgesetzt.<br>
-        <b>8.</b> Nebenwerte nur mit Limit-Order.
+        <b>8.</b> Nebenwerte nur mit Limit-Order.<br>
+        <b>9.</b> Spekulativ-Werte: nur nach Recherche, max. 0,25% Risiko, immer mit Stop.
       </div>
     </div>
   </div>
