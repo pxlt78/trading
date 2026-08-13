@@ -6,7 +6,7 @@
 <title>Trading Radar</title>
 <style>
   :root{--bg:#0d0f14;--surface:#161a22;--surface2:#1e2330;--border:#2a2f3d;--text:#e8eaf0;--muted:#7a8099;
-  --green:#00d084;--red:#ff4d6d;--yellow:#fbbf24;--blue:#60a5fa;--purple:#a78bfa;--orange:#fb923c;--pink:#f472b6;}
+  --green:#00d084;--red:#ff4d6d;--yellow:#fbbf24;--blue:#60a5fa;--purple:#a78bfa;--orange:#fb923c;}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif}
   header{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:1px solid var(--border);background:var(--surface)}
@@ -43,8 +43,6 @@
   .card.lvl{border-left-color:var(--yellow)}
   .card.evt{border-left-color:var(--blue)}
   .card.no{border-left-color:var(--muted);opacity:.72}
-  .card.spec{border-left-color:var(--pink);background:rgba(244,114,182,.04)}
-  .spec-empty{color:var(--muted);font-size:.8rem;padding:10px 0}
   .c-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:3px}
   .tk{font-size:.95rem;font-weight:700}
   .cat{font-size:.6rem;padding:2px 6px;border-radius:4px;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
@@ -89,6 +87,34 @@
   .rules{font-size:.73rem;color:var(--muted);line-height:1.95}
   .rules b{color:var(--text)}
   footer{padding:15px 28px;border-top:1px solid var(--border);font-size:.67rem;color:#4a5070;text-align:center;margin-top:24px}
+
+  /* MARKTAMPEL */
+  .ampel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:14px}
+  .ampel-hd{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;color:var(--muted)}
+  .ampel-src{font-weight:400;font-size:.64rem;margin-left:auto;color:var(--muted)}
+  .ampel-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .ampel-item{display:flex;gap:9px;align-items:flex-start}
+  .ampel-lbl{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:var(--text)}
+  .ampel-txt{font-size:.68rem;color:var(--muted);line-height:1.5}
+  .dot-g{width:9px;height:9px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:2px}
+  .dot-y{width:9px;height:9px;border-radius:50%;background:var(--yellow);flex-shrink:0;margin-top:2px}
+  .dot-r{width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:2px}
+
+  /* TOP-CRV */
+  .topcrv{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 20px;margin-bottom:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .topcrv-title{font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);white-space:nowrap;margin-right:4px}
+  .crv-badge{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 13px;min-width:150px}
+  .crv-b-rank{font-size:.6rem;color:var(--muted);margin-bottom:2px}
+  .crv-b-tk{font-size:.88rem;font-weight:700}
+  .crv-b-cat{font-size:.62rem;color:var(--muted);margin:2px 0}
+  .crv-b-val{font-size:1.05rem;font-weight:700;color:var(--green)}
+  .crv-b-status{font-size:.6rem;color:var(--yellow);margin-top:1px}
+
+  /* SPEKULATIV */
+  .spek{background:var(--surface);border:1px solid rgba(167,139,250,.25);border-radius:12px;padding:16px 20px;margin-bottom:24px}
+  .spek-hd{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--purple);margin-bottom:12px}
+  .spek-empty{color:var(--muted);font-size:.75rem;text-align:center;padding:18px 0;font-style:italic}
+  .card.spk{border-left-color:var(--purple)}
 </style>
 </head>
 <body>
@@ -98,43 +124,54 @@
     <span style="font-size:1.25rem">📡</span><h1>Trading Radar</h1>
   </div>
   <div style="display:flex;gap:11px;align-items:center">
-    <span class="stand">Stand: <b id="stand">12.08.2026</b> · Quelle: aktienmagazin.de / TraderFox</span>
-    <span class="stand">EUR/USD <b>1,1550</b></span>
+    <span class="stand">Stand: <b id="stand">13.08.2026</b> · Quelle: aktienmagazin.de / Börse-Intern / TraderFox</span>
+    <span class="stand">EUR/USD <b>1,1538</b></span>
   </div>
 </header>
 
 <div class="main">
 
   <!-- MARKTAMPEL -->
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:14px">
-    <div style="font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;margin-bottom:10px">
-      🚦 Marktampel — Quelle: Börse-Intern (Sven Weisenhaus), Ausgabe 11.08.2026
+  <div class="ampel">
+    <div class="ampel-hd">
+      📊 Markt-Ampel
+      <span class="ampel-src">Quelle: Börse-Intern (Sven Weisenhaus), Ausgabe 11.08.2026</span>
     </div>
-    <div style="display:flex;gap:22px;flex-wrap:wrap">
-      <div style="display:flex;align-items:flex-start;gap:8px;max-width:230px">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);margin-top:4px;flex-shrink:0"></div>
-        <div><div style="font-size:.7rem;color:var(--muted)">Markt-Klima</div>
-        <div style="font-size:.82rem;font-weight:600">Bullish — S&P-500-Gewinne Q2 +50,4% YoY, 86% Beat-Quote</div></div>
+    <div class="ampel-grid">
+      <div class="ampel-item">
+        <div class="dot-g"></div>
+        <div>
+          <div class="ampel-lbl">Markt-Klima</div>
+          <div class="ampel-txt">S&amp;P 500 Gewinnwachstum +50,4% im Q2 2026 — 86% der Unternehmen übertrafen Erwartungen. Umsatzwachstum +15%.</div>
+        </div>
       </div>
-      <div style="display:flex;align-items:flex-start;gap:8px;max-width:230px">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow);margin-top:4px;flex-shrink:0"></div>
-        <div><div style="font-size:.7rem;color:var(--muted)">Zinserwartung</div>
-        <div style="font-size:.82rem;font-weight:600">Schwankend — Zinssenkungs-Wahrsch. 16.9. bei ~52%, war 67%</div></div>
+      <div class="ampel-item">
+        <div class="dot-y"></div>
+        <div>
+          <div class="ampel-lbl">Zinserwartung</div>
+          <div class="ampel-txt">Fed-Zinserhöhungswahrsch. 52% für 16.9. — schwache Jobs-Daten dämpften, Ölpreisanstieg heizte wieder an.</div>
+        </div>
       </div>
-      <div style="display:flex;align-items:flex-start;gap:8px;max-width:230px">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--red);margin-top:4px;flex-shrink:0"></div>
-        <div><div style="font-size:.7rem;color:var(--muted)">Ölpreis/Geopolitik</div>
-        <div style="font-size:.82rem;font-weight:600">Risiko — Brent +15% in 5 Tagen, Hormus-Lage ungeklärt</div></div>
+      <div class="ampel-item">
+        <div class="dot-r"></div>
+        <div>
+          <div class="ampel-lbl">Ölpreis / Geopolitik</div>
+          <div class="ampel-txt">Brent +15% in 5 Handelstagen, +7% allein gestern. Hormus-Meerenge trotz Trump weiterhin Risikozone.</div>
+        </div>
       </div>
-      <div style="display:flex;align-items:flex-start;gap:8px;max-width:230px">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow);margin-top:4px;flex-shrink:0"></div>
-        <div><div style="font-size:.7rem;color:var(--muted)">Anleiherenditen</div>
-        <div style="font-size:.82rem;font-weight:600">Steigend — Konkurrenz für Aktien, im Blick behalten</div></div>
+      <div class="ampel-item">
+        <div class="dot-r"></div>
+        <div>
+          <div class="ampel-lbl">Anleiherenditen</div>
+          <div class="ampel-txt">10-jährige US-Treasuries steigen weiter — steigende Renditen machen Aktien relativ teurer.</div>
+        </div>
       </div>
-      <div style="display:flex;align-items:flex-start;gap:8px;max-width:230px">
-        <div style="width:10px;height:10px;border-radius:50%;background:var(--blue);margin-top:4px;flex-shrink:0"></div>
-        <div><div style="font-size:.7rem;color:var(--muted)">Profi-Signal</div>
-        <div style="font-size:.82rem;font-weight:600">Vorsicht — Börse-Intern-Depot hält ~75% Cash trotz Long-Bias</div></div>
+      <div class="ampel-item">
+        <div class="dot-y"></div>
+        <div>
+          <div class="ampel-lbl">Profi-Signal</div>
+          <div class="ampel-txt">Börse-Intern Premium hält ~75% Cash (steigend). Long-Bias, aber Risikoreduktion via Positionsgröße empfohlen.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -172,20 +209,36 @@
     <div class="pf-sep"></div>
     <div class="pf-item">
       <span class="pf-label">Handelbar heute</span>
-      <span class="pf-val" style="color:var(--green)">2 Kandidaten</span>
+      <span class="pf-val" style="color:var(--green)">1 Kandidat</span>
     </div>
   </div>
 
   <div class="warn" id="warn"></div>
 
-  <!-- TOP CRV -->
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap">
-    <span style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)">🏆 Top 3 nach CRV (global, alle Kategorien)</span>
-    <span style="font-size:.85rem"><b style="color:var(--yellow)">1. Ero Copper</b> <span style="color:var(--muted)">CRV 2,1 · wartet auf Level ≤27 €</span></span>
-    <span style="color:var(--border)">|</span>
-    <span style="font-size:.85rem"><b style="color:var(--yellow)">2. Pfisterer</b> <span style="color:var(--muted)">CRV 2,1 · jetzt handelbar ≤78 €</span></span>
-    <span style="color:var(--border)">|</span>
-    <span style="font-size:.85rem"><b style="color:var(--yellow)">3. CACI</b> <span style="color:var(--muted)">CRV 2,0 · wartet auf Level 535 €</span></span>
+  <!-- TOP-CRV-LEISTE -->
+  <div class="topcrv">
+    <span class="topcrv-title">🏆 Top 3 nach CRV (global, alle Kategorien)</span>
+    <div class="crv-badge">
+      <div class="crv-b-rank">#1 · Warten auf Level</div>
+      <div class="crv-b-tk">Lumentum LITE</div>
+      <div class="crv-b-cat">Momentum · KI-Photonik</div>
+      <div class="crv-b-val">CRV 2,5</div>
+      <div class="crv-b-status">Trigger: Pullback 680–700 €</div>
+    </div>
+    <div class="crv-badge">
+      <div class="crv-b-rank">#2 · Warten auf Level</div>
+      <div class="crv-b-tk">Coherent COHR</div>
+      <div class="crv-b-cat">Rebound · Post-Earnings</div>
+      <div class="crv-b-val">CRV 2,4</div>
+      <div class="crv-b-status">Trigger: Stabilisierung 295–305 €</div>
+    </div>
+    <div class="crv-badge">
+      <div class="crv-b-rank">#3 · Handelbar jetzt</div>
+      <div class="crv-b-tk">SFC Energy F3C</div>
+      <div class="crv-b-cat">Rebound · Nebenwert</div>
+      <div class="crv-b-val">CRV 2,2</div>
+      <div class="crv-b-status">Limit-Order zwingend</div>
+    </div>
   </div>
 
   <!-- STATUS-SPALTEN -->
@@ -194,71 +247,74 @@
     <!-- HANDELBAR -->
     <div>
       <div class="col-title"><div class="dot" style="background:var(--green)"></div>
-        <span style="color:var(--green)">Handelbar jetzt</span><span class="col-count">2</span></div>
+        <span style="color:var(--green)">Handelbar jetzt</span><span class="col-count">1</span></div>
 
       <div class="card go">
         <div class="c-top"><span class="tk">SFC Energy</span><span class="cat reb">Rebound</span></div>
         <div class="co">F3C.DE · Brennstoffzellen · Nebenwert</div>
-        <div class="px">20,25 € <small>Xetra, nativ EUR · Kurs 04.08.</small></div>
+        <div class="px">20,25 € <small>Xetra, nativ EUR</small></div>
         <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">≤20,10 €</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">17,50 €</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">24,30 €</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-mid">1,6</div></div>
+          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">20,25 €</div></div>
+          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">18,80 €</div></div>
+          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">23,50 €</div></div>
+          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,2</div></div>
         </div>
-        <div class="size" data-entry="20.10" data-stop="17.50">
+        <div class="size" data-entry="20.25" data-stop="18.80">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Charttechnischer Aufwärtstrend seit April (+31%). Gewinnprognose vom Unternehmen erhöht (aktienmagazin.de, 05.08.) — bestätigt die Story.
-        Ziel 24,30 € = 12-Monats-Hoch vom 26. Mai. <b style="color:var(--yellow)">Einstieg über ~20,20 € meiden — CRV fällt sonst unter 1,5.</b> Nebenwert → Limit-Order zwingend.</div>
-      </div>
-
-      <div class="card go">
-        <div class="c-top"><span class="tk">Pfisterer</span><span class="cat reb">Rebound</span></div>
-        <div class="co">PFSE21 · Stromnetz-Infrastruktur DE · Nebenwert</div>
-        <div class="px">~77,00 € <small>Xetra, nativ EUR · Kurs 07.08. · Preis unsicher</small></div>
-        <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">≤78,00 €</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">70,00 €</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">95,00 €</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,1</div></div>
-        </div>
-        <div class="size" data-entry="78" data-stop="70">
-          Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
-        </div>
-        <div class="note">Spezialist für Isolier- und Verbindungstechnik im Stromnetz (Freileitungen + Erdkabel). Profitiert direkt vom deutschen Netzausbau: €360 Mrd. Investitionen bis 2045, Tennet-Auftrag für Südlink-Stromautobahn. Q1 2026: Umsatz +26,7%, Gewinn +57,7%.
-        Focus Money (Ausg. 32/2026): Kauf mit Ziel 117 € (+51%). Aktuell ~32% unter 52W-Hoch (113 € vom 14.05.) — Rücksetzer ohne fundamentale Verschlechterung.
-        <b style="color:var(--yellow)">Nebenwert → Limit-Order zwingend. Keine Tageskurs-Order.</b></div>
+        <div class="note">Prognose angehoben auf 163–175 Mio € Umsatz nach Rekordauftrag Ukraine (42,7 Mio €). Berenberg-Ziel 24 €.
+        Kurs stieg seit 10.08. — Stop auf 18,80 € nachgezogen (unter Ausbruchniveau). CRV bleibt 2,2.
+        <b style="color:var(--yellow)">Nebenwert → Limit-Order zwingend, Spread beachten.</b></div>
       </div>
     </div>
 
     <!-- WARTEN AUF LEVEL -->
     <div>
       <div class="col-title"><div class="dot" style="background:var(--yellow)"></div>
-        <span style="color:var(--yellow)">Warten auf Level</span><span class="col-count">3</span></div>
+        <span style="color:var(--yellow)">Warten auf Level</span><span class="col-count">4</span></div>
 
       <div class="card lvl">
-        <div class="c-top"><span class="tk">Ero Copper</span><span class="cat mom">Momentum</span></div>
-        <div class="co">ERO · NYSE · Kupferbergbau Brasilien/Kap Verde</div>
-        <div class="px">~29,04 € <small>$33,54 · Kurs 07.08.</small></div>
-        <div class="trigger">⏳ Trigger: Konsolidierung, Zone ≤27 € abwarten</div>
+        <div class="c-top"><span class="tk">Lumentum</span><span class="cat mom">Momentum</span></div>
+        <div class="co">LITE · KI-Photonik / Optische Verbindungen</div>
+        <div class="px">719 € <small>~$830 · NEU 13.08.</small></div>
+        <div class="trigger">⏳ Trigger: Pullback in Zone 680–700 €</div>
         <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">≤27,00 €</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">23,50 €</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">34,50 €</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,1</div></div>
+          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">690,00 €</div></div>
+          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">625,00 €</div></div>
+          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">850,00 €</div></div>
+          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,5</div></div>
         </div>
-        <div class="size" data-entry="27" data-stop="23.50">
+        <div class="size" data-entry="690" data-stop="625">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Q2 2026: Umsatz +73,9% auf $284 Mio., EPS $0,85 (Konsens $0,74 geschlagen). Stifel hebt Kursziel auf C$53 an. aktienmagazin.de (10.08.): Bruch des 52W-Hochs erwartet.
-        Aktie fiel zunächst nach Zahlen, erholte sich dann +9,5% am 07.08. — typische Earnings-Volatilität. Preis ($33,54) liegt über Einstieg: Pullback auf ≤27 € (≈$31) abwarten, bevor Position eröffnet wird.</div>
+        <div class="note">Umsatz +109% YoY auf über 1 Mrd. USD (Trader-Zeitung 12.08.). Adj. EPS $3,23 — Analystenziel Ø ~986 USD (~854 €, Spanne $550–$1.270).
+        Intraday-Spike 12.08. bis $951 (+16%) → Hinterherlaufen verboten. Analyst-Konsens: 82% Buy.
+        <b style="color:var(--red)">Cluster-Achtung:</b> Gleiches Thema wie Coherent (KI/Photonik) — max. 2 Positionen im Thema.</div>
+      </div>
+
+      <div class="card lvl">
+        <div class="c-top"><span class="tk">Coherent</span><span class="cat reb">Rebound</span></div>
+        <div class="co">COHR · Photonik / KI-Infrastruktur</div>
+        <div class="px">308 € <small>$355,72 · Post-Earnings 13.08.</small></div>
+        <div class="trigger">⏳ Trigger: Stabilisierung über 295–305 €</div>
+        <div class="setup">
+          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">305,00 €</div></div>
+          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">275,00 €</div></div>
+          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">375,00 €</div></div>
+          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,4</div></div>
+        </div>
+        <div class="size" data-entry="305" data-stop="275">
+          Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
+        </div>
+        <div class="note">Q4-Zahlen 12.08. geschlagen: Umsatz $2,05B (+34% YoY, beat), EPS $1,74 (beat $1,65 est). NVIDIA-Partnerschaft, Rekord-Auftragsbestand bis 2028.
+        Erratische Reaktion: +8% intraday, dann −7% nach Börsenschluss. Fundamentals intakt — Einstieg erst nach Stabilisierung.
+        <b style="color:var(--red)">Cluster mit Lumentum (KI/Photonik) — max. 2 Positionen.</b></div>
       </div>
 
       <div class="card lvl">
         <div class="c-top"><span class="tk">CACI Intl.</span><span class="cat mom">Momentum</span></div>
         <div class="co">CACI · US Defense &amp; IT</div>
-        <div class="px">558,40 € <small>$644,96 · Kurs 10.08.</small></div>
+        <div class="px">558 € <small>$644</small></div>
         <div class="trigger">⏳ Trigger: Rücksetzer in Zone 530–540 €</div>
         <div class="setup">
           <div class="su"><div class="su-l">Einstieg</div><div class="su-v">535,00 €</div></div>
@@ -269,14 +325,14 @@
         <div class="size" data-entry="535" data-stop="508">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Q4 FY2026: EPS $8,91 (+22,7% über Konsens), Umsatz +17,6% auf $2,71 Mrd. 8 Analysten revidierten Prognosen aufwärts. aktienmagazin.de (07.08.): Redaktion erwägt Investment-Ausbau — bestätigt die Story.
-        <b style="color:var(--yellow)">Zacks-Widerspruch: Rank #3 (Hold)</b> — mildere Einschätzung als aktienmagazin. Kein Einstieg auf dem Hoch bei ~558 €, Pullback in Zone 530–540 € abwarten.</div>
+        <div class="note">Zahlen über Erwartung, FY27-Guidance angehoben, JPMorgan-Ziel 715 $ (~620 €). Kurs stieg leicht auf 558 € — Einstiegsniveau noch nicht erreicht.
+        Zacks-Gegenlesen nicht möglich (Quelle nicht erreichbar). <b>Nicht auf dem Hoch kaufen.</b></div>
       </div>
 
       <div class="card lvl">
         <div class="c-top"><span class="tk">Digital Turbine</span><span class="cat tur">Turnaround</span></div>
         <div class="co">APPS · Mobile Software</div>
-        <div class="px">11,52 € <small>$13,31 · weiterer Sprung +15,6% am 05.08.</small></div>
+        <div class="px">11,54 € <small>$13,31</small></div>
         <div class="trigger">⏳ Trigger: Konsolidierung, Zone 9,50–10,00 €</div>
         <div class="setup">
           <div class="su"><div class="su-l">Einstieg</div><div class="su-v">9,80 €</div></div>
@@ -287,91 +343,51 @@
         <div class="size" data-entry="9.80" data-stop="8.75">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Fundamental sauberster Turnaround: Umsatz +27%, adj. EBITDA +69%, adj. EPS +217%, Guidance erhöht. FY2027-Prognose: $630–650 Mio. Umsatz, EPS 84 Cent (+50% YoY).
-        Zacks Rank #1 (Strong Buy) — bestätigt Story ✓. Inzwischen +35% (05.08.) und +15,6% (06.08.) — <b style="color:var(--red)">Kurssprünge nicht hinterherlaufen.</b> Hohe Vola → breiter Stop → kleinere Position.</div>
+        <div class="note">Q1 FY27 (Aug 4): Umsatz +27% YoY ($166 Mio), Analystenkonsens 3× Analysten Avg-Target $15,17 — fundamental stärker als der Kurs zeigt.
+        Kurs aktuell 11,54 € — noch 15% über dem Einstiegsniveau. <b style="color:var(--red)">Konsolidierung abwarten.</b> Hohe Vola → breiter Stop.</div>
       </div>
     </div>
 
     <!-- WARTEN AUF TERMIN -->
     <div>
       <div class="col-title"><div class="dot" style="background:var(--blue)"></div>
-        <span style="color:var(--blue)">Warten auf Termin</span><span class="col-count">2</span></div>
-
-      <div class="card evt">
-        <div class="c-top"><span class="tk">Coherent</span><span class="cat reb">Rebound</span></div>
-        <div class="co">COHR · Photonik / KI-Infrastruktur</div>
-        <div class="px">328,18 € <small>$379,13 · Kurs 07.08.</small></div>
-        <div class="trigger">📅 Zahlen 12.08.2026 nach US-Schluss — Ergebnisse kommen heute Abend (US-Zeit). Am 13.08. neu bewerten.</div>
-        <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v" style="color:var(--muted)">nach Zahlen</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--muted)">offen</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--muted)">offen</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v" style="color:var(--muted)">–</div></div>
-        </div>
-        <div class="note">Q4-Guidance: $1,91–2,05 Mrd. Umsatz, adj. EPS Midpoint $1,62. Analyst-Konsens: EPS $1,43 (+93% YoY). aktienmagazin.de (10.08.): ungebrochene KI-Nachfrage bestätigt.
-        NVIDIA-Liefervertrag für Co-Packaged Optics, potenzieller FCC-Bann für chinesische Datacenter-Hardware = Tailwind.
-        <b style="color:var(--red)">Kein Einstieg vor den Zahlen.</b> Am 13.08. neu bewerten — Setup und Stop nur nach Marktreaktion setzen.</div>
-      </div>
-
-      <div class="card evt">
-        <div class="c-top"><span class="tk">Telesat</span><span class="cat mom">Momentum</span></div>
-        <div class="co">TSAT · NASDAQ · LEO-Satelliten / Verteidigung</div>
-        <div class="px">~51,01 € <small>$58,92 · Kurs 07.08.</small></div>
-        <div class="trigger">📅 Zahlen 13.08.2026</div>
-        <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v" style="color:var(--muted)">nach Zahlen</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--muted)">offen</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--muted)">offen</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v" style="color:var(--muted)">–</div></div>
-        </div>
-        <div class="note">Größter Einzelvertrag der Firmengeschichte: $1,9 Mrd. von der kanadischen Regierung (15 Jahre Arktis-Militärkonnektivität). LEO-Konstellation wird von 156 auf 225 Satelliten (+44%) ausgebaut. Umsatzprognose 2032: $3,2 → $4,9 Mrd. Verteidigungsanteil: 14% → 46%.
-        NATO-Staaten (DE, IT, Südkorea, USA) führen Gespräche über eigene Folgeaufträge. Aktie sprang +36% am 04.08. und weitere +9% am 07.08. — kein Einstieg auf dem Sprung.
-        <b style="color:var(--red)">Kein Einstieg vor den Zahlen (13.08.).</b> Danach neu bewerten.</div>
+        <span style="color:var(--blue)">Warten auf Termin</span><span class="col-count">0</span></div>
+      <div style="color:var(--muted);font-size:.73rem;padding:12px 0;text-align:center">
+        Kein Kandidat mit anstehendem Katalysator-Datum.
       </div>
     </div>
 
     <!-- KEIN SETUP -->
     <div>
       <div class="col-title"><div class="dot" style="background:var(--muted)"></div>
-        <span style="color:var(--muted)">Kein Setup</span><span class="col-count">3</span></div>
+        <span style="color:var(--muted)">Kein Setup</span><span class="col-count">2</span></div>
 
       <div class="card no">
         <div class="c-top"><span class="tk">Zebra Technologies</span><span class="cat mom">Momentum</span></div>
         <div class="co">ZBRA · Enterprise Mobility</div>
-        <div class="px">312,59 € <small>$361,38</small></div>
-        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> Kurs notiert über allen Analystenzielen
-        (Citi 306 $, Wolfe 317 $ vs. Kurs 361 $). Dazu +36 % in sieben Handelstagen.
-        Zahlen top (adj. EPS +76 %, Guidance +13 %) — aber das ist bereits im Kurs. Kein vernünftiges CRV konstruierbar.</div>
+        <div class="px">~313 € <small>Stand 10.08. · Kurs unsicher</small></div>
+        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> Kurs über allen Analystenzielen (Citi 306 $, Wolfe 317 $ vs. Kurs ~361 $). +36% in sieben Handelstagen.
+        Zahlen top (adj. EPS +76%, Guidance +13%) — bereits im Kurs. Kein vernünftiges CRV konstruierbar.</div>
       </div>
 
       <div class="card no">
         <div class="c-top"><span class="tk">Palantir</span><span class="cat mom">Momentum</span></div>
         <div class="co">PLTR · AI Analytics</div>
         <div class="px" style="color:var(--muted)">—</div>
-        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> KGV ~147. Bei dieser Bewertung liegt der Stop
-        entweder so eng, dass normales Rauschen ihn auslöst, oder so weit, dass das Risiko die Positionsgröße auffrisst.
+        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> KGV ~147. Stop entweder so eng, dass normales Rauschen ihn auslöst, oder so weit, dass das Risiko die Positionsgröße auffrisst.
         Wachstum stark — Setup trotzdem nicht handelbar.</div>
-      </div>
-
-      <div class="card no">
-        <div class="c-top"><span class="tk">Karat Packaging</span><span class="cat mom">Momentum</span></div>
-        <div class="co">KRT · NASDAQ · Einweg-Verpackungen · US</div>
-        <div class="px">34,85 € <small>0,24 · Kurs 11.08. (nach Earnings-Sprung)</small></div>
-        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> Q2 2026 Rekordquartal mit +15 % Sprung auf Allzeithoch (aktienmagazin.de, 11.08.). EPS-Beat (1,47 $ vs. 0,51 $ erwartet) zu wesentlichem Teil durch einmalige IEEPA-Zollrückerstattung verzerrt — bereinigte Bruttomarge laut Management 37,7 %. Analystenkonsens (36,52 $) liegt unter aktuellem Kurs (40,24 $). Kein CRV konstruierbar.</div>
       </div>
     </div>
   </div>
 
-  <!-- SPEKULATIV -->
-  <div style="background:var(--surface);border:1px solid rgba(244,114,182,.25);border-radius:12px;padding:18px 20px;margin-bottom:24px">
-    <div class="col-title" style="margin-bottom:6px;border-bottom:2px solid rgba(244,114,182,.25)">
-      <div class="dot" style="background:var(--pink)"></div>
-      <span style="color:var(--pink)">🎲 Spekulativ</span><span class="col-count">0</span>
+  <!-- SPEKULATIV-SEKTION -->
+  <div class="spek">
+    <div class="spek-hd">
+      <span style="font-size:.9rem">⚡</span> Spekulativ (Small Caps · Max. 0,25% Risiko)
     </div>
-    <div style="font-size:.75rem;color:var(--muted);margin-bottom:12px;line-height:1.5">
-      Kleine, dünn gehandelte Werte mit hoher Schwankungsbreite (Chancen wie Risiken). Nur Kandidaten, die recherchiert und für plausibel befunden wurden — keine reinen Volumen-/Hype-Meldungen. Max. 0,25% Risiko statt 1%, Stop ist auch hier Pflicht.
+    <div class="spek-empty">
+      Heute kein Kandidat aufgenommen — keine verfügbare Position hat alle 5 Prüfkriterien (reales Umsatzgeschäft, konkreter Katalysator, aktuelles Analyst-Buy, ausreichende Liquidität, kein >20%-Sprung) gleichzeitig erfüllt. Quellen Benzinga/MarketBeat waren heute nicht erreichbar.
     </div>
-    <div class="spec-empty">Aktuell kein recherchierter Kandidat — Benzinga/MarketBeat-Upgrades dieser Woche betreffen Mid-Caps (KTOS, AEIS), die den Spekulativ-Kriterien nicht entsprechen. Lieber leer als Lotterie.</div>
   </div>
 
   <!-- BOTTOM -->
@@ -403,15 +419,14 @@
         <b>5.</b> Kurssprüngen nicht hinterherlaufen — Konsolidierung abwarten.<br>
         <b>6.</b> Max. 2 Positionen im selben Thema (Cluster-Risiko).<br>
         <b>7.</b> Stop wird nachgezogen, nie zurückgesetzt.<br>
-        <b>8.</b> Nebenwerte nur mit Limit-Order.<br>
-        <b>9.</b> Spekulativ-Werte: nur nach Recherche, max. 0,25% Risiko, immer mit Stop.
+        <b>8.</b> Nebenwerte nur mit Limit-Order.
       </div>
     </div>
   </div>
 </div>
 
 <footer>
-  Trading Radar · Ideenquelle: aktienmagazin.de / TraderFox · Kurse in EUR, umgerechnet zu 1,1550 USD/EUR<br>
+  Trading Radar · Ideenquelle: aktienmagazin.de / TraderFox / Börse-Intern (stockstreet.de) · Kurse in EUR, umgerechnet zu 1,1538 USD/EUR<br>
   Keine Anlageberatung. Alle Einstiegs-, Stop- und Zielmarken sind Vorschläge auf Basis öffentlicher Daten — die Entscheidung liegt bei dir.
 </footer>
 
@@ -468,10 +483,9 @@ function addLog(){
 function delLog(i){ log.splice(i,1); save(); renderLog(); }
 
 /* CLUSTER */
-const themes={'CACI':'Defense','SFC':'Energie','PFISTERER':'Infrastruktur','PFSE':'Infrastruktur',
-'ERO':'Rohstoffe','COPPER':'Rohstoffe','ZEBRA':'KI/Tech','COHERENT':'KI/Tech','COHR':'KI/Tech',
+const themes={'CACI':'Defense','SFC':'Energie','ZEBRA':'KI/Tech','COHERENT':'KI/Tech','COHR':'KI/Tech',
 'PALANTIR':'KI/Tech','PLTR':'KI/Tech','DIGITAL':'KI/Tech','APPS':'KI/Tech','NVIDIA':'KI/Tech','NVDA':'KI/Tech',
-'TELESAT':'Weltraum','TSAT':'Weltraum'};
+'LUMENTUM':'KI/Tech','LITE':'KI/Tech'};
 function checkCluster(){
   const cnt={};
   log.forEach(t=>{
