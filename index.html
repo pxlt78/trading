@@ -14,31 +14,20 @@
   .stand{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:.75rem;color:var(--muted)}
   .stand b{color:var(--text)}
   .main{padding:22px 28px;max-width:1400px;margin:0 auto}
-
-  /* PORTFOLIO BAR */
   .pf{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:14px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
   .pf-item{display:flex;flex-direction:column;gap:3px}
   .pf-label{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}
   .pf-val{font-size:1.05rem;font-weight:700}
-  .pf input{background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);
-  padding:5px 9px;font-size:1rem;font-weight:700;width:120px;font-family:inherit}
+  .pf input{background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:5px 9px;font-size:1rem;font-weight:700;width:120px;font-family:inherit}
   .pf input:focus{outline:none;border-color:var(--blue)}
   .pf-sep{width:1px;height:34px;background:var(--border)}
-
-  .warn{background:rgba(255,77,109,.08);border:1px solid rgba(255,77,109,.3);border-radius:10px;
-  padding:11px 16px;margin-bottom:20px;font-size:.8rem;color:var(--red);display:none}
+  .warn{background:rgba(255,77,109,.08);border:1px solid rgba(255,77,109,.3);border-radius:10px;padding:11px 16px;margin-bottom:20px;font-size:.8rem;color:var(--red);display:none}
   .warn.on{display:block}
-
-  /* COLUMNS */
   .grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:24px}
-  .col-title{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;
-  letter-spacing:.1em;margin-bottom:12px;padding-bottom:9px;border-bottom:2px solid var(--border)}
+  .col-title{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;padding-bottom:9px;border-bottom:2px solid var(--border)}
   .col-title .dot{width:8px;height:8px;border-radius:50%}
   .col-count{margin-left:auto;color:var(--muted);font-weight:600}
-
-  /* CARD */
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:11px;
-  border-left:3px solid var(--border)}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:11px;border-left:3px solid var(--border)}
   .card.go{border-left-color:var(--green)}
   .card.lvl{border-left-color:var(--yellow)}
   .card.evt{border-left-color:var(--blue)}
@@ -52,33 +41,23 @@
   .co{font-size:.7rem;color:var(--muted);margin-bottom:9px}
   .px{font-size:1.15rem;font-weight:700;margin-bottom:9px}
   .px small{font-size:.68rem;color:var(--muted);font-weight:400;margin-left:5px}
-
-  /* SETUP GRID */
-  .setup{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);
-  border-radius:7px;overflow:hidden;margin-bottom:9px}
+  .setup{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:7px;overflow:hidden;margin-bottom:9px}
   .su{background:var(--surface2);padding:6px 8px}
   .su-l{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
   .su-v{font-size:.85rem;font-weight:700;margin-top:1px}
   .crv-ok{color:var(--green)} .crv-mid{color:var(--yellow)} .crv-bad{color:var(--red)}
-
-  .size{background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.22);border-radius:7px;
-  padding:7px 9px;margin-bottom:9px;font-size:.72rem}
+  .size{background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.22);border-radius:7px;padding:7px 9px;margin-bottom:9px;font-size:.72rem}
   .size b{color:var(--blue);font-size:.85rem}
   .note{font-size:.71rem;color:var(--muted);line-height:1.55;border-top:1px solid var(--border);padding-top:8px}
-  .trigger{font-size:.68rem;color:var(--yellow);margin-bottom:8px;padding:5px 8px;background:rgba(251,191,36,.07);
-  border-radius:5px;border:1px solid rgba(251,191,36,.2)}
-
-  /* BOTTOM */
+  .trigger{font-size:.68rem;color:var(--yellow);margin-bottom:8px;padding:5px 8px;background:rgba(251,191,36,.07);border-radius:5px;border:1px solid rgba(251,191,36,.2)}
   .bot{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
   .panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px}
   table{width:100%;border-collapse:collapse;font-size:.75rem}
-  th{text-align:left;color:var(--muted);font-size:.63rem;text-transform:uppercase;letter-spacing:.07em;
-  padding:6px 7px;border-bottom:1px solid var(--border);font-weight:600}
+  th{text-align:left;color:var(--muted);font-size:.63rem;text-transform:uppercase;letter-spacing:.07em;padding:6px 7px;border-bottom:1px solid var(--border);font-weight:600}
   td{padding:7px;border-bottom:1px solid var(--border)}
   tr:last-child td{border-bottom:none}
   .log-in{display:grid;grid-template-columns:1fr 68px 68px 78px 34px;gap:6px;margin-top:11px}
-  .log-in input{background:var(--surface2);border:1px solid var(--border);border-radius:5px;color:var(--text);
-  padding:6px 8px;font-size:.73rem;font-family:inherit;min-width:0}
+  .log-in input{background:var(--surface2);border:1px solid var(--border);border-radius:5px;color:var(--text);padding:6px 8px;font-size:.73rem;font-family:inherit;min-width:0}
   .log-in input:focus{outline:none;border-color:var(--blue)}
   .log-in button{background:var(--blue);border:none;border-radius:5px;color:#0d0f14;font-weight:700;cursor:pointer;font-size:.9rem}
   .del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.85rem;padding:0 3px}
@@ -87,8 +66,6 @@
   .rules{font-size:.73rem;color:var(--muted);line-height:1.95}
   .rules b{color:var(--text)}
   footer{padding:15px 28px;border-top:1px solid var(--border);font-size:.67rem;color:#4a5070;text-align:center;margin-top:24px}
-
-  /* MARKTAMPEL */
   .ampel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:14px}
   .ampel-hd{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;color:var(--muted)}
   .ampel-src{font-weight:400;font-size:.64rem;margin-left:auto;color:var(--muted)}
@@ -99,8 +76,6 @@
   .dot-g{width:9px;height:9px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:2px}
   .dot-y{width:9px;height:9px;border-radius:50%;background:var(--yellow);flex-shrink:0;margin-top:2px}
   .dot-r{width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:2px}
-
-  /* TOP-CRV */
   .topcrv{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 20px;margin-bottom:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
   .topcrv-title{font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);white-space:nowrap;margin-right:4px}
   .crv-badge{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 13px;min-width:150px}
@@ -109,8 +84,6 @@
   .crv-b-cat{font-size:.62rem;color:var(--muted);margin:2px 0}
   .crv-b-val{font-size:1.05rem;font-weight:700;color:var(--green)}
   .crv-b-status{font-size:.6rem;color:var(--yellow);margin-top:1px}
-
-  /* SPEKULATIV */
   .spek{background:var(--surface);border:1px solid rgba(167,139,250,.25);border-radius:12px;padding:16px 20px;margin-bottom:24px}
   .spek-hd{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--purple);margin-bottom:12px}
   .spek-empty{color:var(--muted);font-size:.75rem;text-align:center;padding:18px 0;font-style:italic}
@@ -124,8 +97,8 @@
     <span style="font-size:1.25rem">📡</span><h1>Trading Radar</h1>
   </div>
   <div style="display:flex;gap:11px;align-items:center">
-    <span class="stand">Stand: <b id="stand">13.08.2026</b> · Quelle: aktienmagazin.de / Börse-Intern / TraderFox</span>
-    <span class="stand">EUR/USD <b>1,1538</b></span>
+    <span class="stand">Stand: <b id="stand">14.08.2026</b> · Quelle: aktienmagazin.de / Börse-Intern / TraderFox</span>
+    <span class="stand">EUR/USD <b>1,1536</b></span>
   </div>
 </header>
 
@@ -135,14 +108,14 @@
   <div class="ampel">
     <div class="ampel-hd">
       📊 Markt-Ampel
-      <span class="ampel-src">Quelle: Börse-Intern (Sven Weisenhaus), Ausgabe 11.08.2026</span>
+      <span class="ampel-src">Quelle: Börse-Intern (Sven Weisenhaus), Ausgabe 13.08.2026</span>
     </div>
     <div class="ampel-grid">
       <div class="ampel-item">
         <div class="dot-g"></div>
         <div>
           <div class="ampel-lbl">Markt-Klima</div>
-          <div class="ampel-txt">S&amp;P 500 Gewinnwachstum +50,4% im Q2 2026 — 86% der Unternehmen übertrafen Erwartungen. Umsatzwachstum +15%.</div>
+          <div class="ampel-txt">S&amp;P 500 EPS +50,4% Q2. STOXX 600: EPS +19,1%, 74% beat Umsatz, Umsatzwachstum +7,8% — Kurs- und Gewinnanstieg gehen Hand in Hand.</div>
         </div>
       </div>
       <div class="ampel-item">
@@ -170,7 +143,7 @@
         <div class="dot-y"></div>
         <div>
           <div class="ampel-lbl">Profi-Signal</div>
-          <div class="ampel-txt">Börse-Intern Premium hält ~75% Cash (steigend). Long-Bias, aber Risikoreduktion via Positionsgröße empfohlen.</div>
+          <div class="ampel-txt">Bear-Keil im Euro STOXX 50, Saisonalität bis Oktober ungünstig. Allstar-Trader Gewinnmitnahmen: Befesa +8,8%, Vestas +22,1%. Risikoreduktion empfohlen.</div>
         </div>
       </div>
     </div>
@@ -219,25 +192,25 @@
   <div class="topcrv">
     <span class="topcrv-title">🏆 Top 3 nach CRV (global, alle Kategorien)</span>
     <div class="crv-badge">
-      <div class="crv-b-rank">#1 · Warten auf Level</div>
+      <div class="crv-b-rank">#1 · Warten auf Level · NEU</div>
+      <div class="crv-b-tk">ATI Inc. ATI</div>
+      <div class="crv-b-cat">Momentum · Defense / Spezialmetalle</div>
+      <div class="crv-b-val">CRV 2,7</div>
+      <div class="crv-b-status">Trigger: Pullback 185–195 €</div>
+    </div>
+    <div class="crv-badge">
+      <div class="crv-b-rank">#2 · Warten auf Level</div>
       <div class="crv-b-tk">Lumentum LITE</div>
       <div class="crv-b-cat">Momentum · KI-Photonik</div>
       <div class="crv-b-val">CRV 2,5</div>
       <div class="crv-b-status">Trigger: Pullback 680–700 €</div>
     </div>
     <div class="crv-badge">
-      <div class="crv-b-rank">#2 · Warten auf Level</div>
+      <div class="crv-b-rank">#3 · Warten auf Level</div>
       <div class="crv-b-tk">Coherent COHR</div>
       <div class="crv-b-cat">Rebound · Post-Earnings</div>
       <div class="crv-b-val">CRV 2,4</div>
       <div class="crv-b-status">Trigger: Stabilisierung 295–305 €</div>
-    </div>
-    <div class="crv-badge">
-      <div class="crv-b-rank">#3 · Handelbar jetzt</div>
-      <div class="crv-b-tk">SFC Energy F3C</div>
-      <div class="crv-b-cat">Rebound · Nebenwert</div>
-      <div class="crv-b-val">CRV 2,2</div>
-      <div class="crv-b-status">Limit-Order zwingend</div>
     </div>
   </div>
 
@@ -252,18 +225,18 @@
       <div class="card go">
         <div class="c-top"><span class="tk">SFC Energy</span><span class="cat reb">Rebound</span></div>
         <div class="co">F3C.DE · Brennstoffzellen · Nebenwert</div>
-        <div class="px">20,25 € <small>Xetra, nativ EUR</small></div>
+        <div class="px">20,78 € <small>Xetra · H1-Bericht 14.08., +1,1%</small></div>
         <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">20,25 €</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">18,80 €</div></div>
+          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">20,75 €</div></div>
+          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">19,50 €</div></div>
           <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">23,50 €</div></div>
           <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,2</div></div>
         </div>
-        <div class="size" data-entry="20.25" data-stop="18.80">
+        <div class="size" data-entry="20.75" data-stop="19.50">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
         <div class="note">Prognose angehoben auf 163–175 Mio € Umsatz nach Rekordauftrag Ukraine (42,7 Mio €). Berenberg-Ziel 24 €.
-        Kurs stieg seit 10.08. — Stop auf 18,80 € nachgezogen (unter Ausbruchniveau). CRV bleibt 2,2.
+        H1-Bericht heute 14.08. veröffentlicht — Kurs +1,1% (positives Signal). Stop auf 19,50 € nachgezogen (unter Pre-Report-Support, Regel 7).
         <b style="color:var(--yellow)">Nebenwert → Limit-Order zwingend, Spread beachten.</b></div>
       </div>
     </div>
@@ -271,12 +244,30 @@
     <!-- WARTEN AUF LEVEL -->
     <div>
       <div class="col-title"><div class="dot" style="background:var(--yellow)"></div>
-        <span style="color:var(--yellow)">Warten auf Level</span><span class="col-count">4</span></div>
+        <span style="color:var(--yellow)">Warten auf Level</span><span class="col-count">5</span></div>
+
+      <div class="card lvl">
+        <div class="c-top"><span class="tk">ATI Inc.</span><span class="cat mom">Momentum</span></div>
+        <div class="co">ATI · Defense &amp; Spezialmetalle / Hochleistungslegierungen</div>
+        <div class="px">~197 € <small>~$228 · NEU 14.08.</small></div>
+        <div class="trigger">⏳ Trigger: Pullback/Konsolidierung Zone 185–195 €</div>
+        <div class="setup">
+          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">190,00 €</div></div>
+          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">175,00 €</div></div>
+          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">230,00 €</div></div>
+          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,7</div></div>
+        </div>
+        <div class="size" data-entry="190" data-stop="175">
+          Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
+        </div>
+        <div class="note">Record Q2 FY26: EBITDA +37%, Umsatz +11%, Rekord-Auftragsbestand 4,4 Mrd. USD (Trader-Zeitung 12.08.). Upgrades: Susquehanna $265, Deutsche Bank $262, Wells Fargo $275. Defense-Nachfrage treibt AA&amp;S-Transformation. 9 Analysten Strong Buy. Ø-Ziel $243 — High-End ($265–275) trägt CRV.
+        <b style="color:var(--red)">Post-Earnings-Lauf bereits gelaufen — Pullback zwingend abwarten. Cluster: zusammen mit CACI max. 2 Defense-Positionen.</b></div>
+      </div>
 
       <div class="card lvl">
         <div class="c-top"><span class="tk">Lumentum</span><span class="cat mom">Momentum</span></div>
         <div class="co">LITE · KI-Photonik / Optische Verbindungen</div>
-        <div class="px">719 € <small>~$830 · NEU 13.08.</small></div>
+        <div class="px">719 € <small>~$830 · 13.08.</small></div>
         <div class="trigger">⏳ Trigger: Pullback in Zone 680–700 €</div>
         <div class="setup">
           <div class="su"><div class="su-l">Einstieg</div><div class="su-v">690,00 €</div></div>
@@ -326,7 +317,7 @@
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
         <div class="note">Zahlen über Erwartung, FY27-Guidance angehoben, JPMorgan-Ziel 715 $ (~620 €). Kurs stieg leicht auf 558 € — Einstiegsniveau noch nicht erreicht.
-        Zacks-Gegenlesen nicht möglich (Quelle nicht erreichbar). <b>Nicht auf dem Hoch kaufen.</b></div>
+        <b style="color:var(--yellow)">Cluster mit ATI (Defense) — max. 2 Positionen gleichzeitig im Thema.</b></div>
       </div>
 
       <div class="card lvl">
@@ -386,7 +377,7 @@
       <span style="font-size:.9rem">⚡</span> Spekulativ (Small Caps · Max. 0,25% Risiko)
     </div>
     <div class="spek-empty">
-      Heute kein Kandidat aufgenommen — keine verfügbare Position hat alle 5 Prüfkriterien (reales Umsatzgeschäft, konkreter Katalysator, aktuelles Analyst-Buy, ausreichende Liquidität, kein >20%-Sprung) gleichzeitig erfüllt. Quellen Benzinga/MarketBeat waren heute nicht erreichbar.
+      Heute kein Kandidat aufgenommen. Benzinga/MarketBeat nicht direkt abrufbar — über Websearch gefundene Kandidaten: Alpha Teknova (TKNO, BTIG-Upgrade Buy $8) scheitert an Kriterium 4 (Liquidität, Micro-Cap). Kein weiterer Kandidat erfüllte alle 5 Prüfkriterien gleichzeitig.
     </div>
   </div>
 
@@ -426,13 +417,12 @@
 </div>
 
 <footer>
-  Trading Radar · Ideenquelle: aktienmagazin.de / TraderFox / Börse-Intern (stockstreet.de) · Kurse in EUR, umgerechnet zu 1,1538 USD/EUR<br>
+  Trading Radar · Ideenquelle: aktienmagazin.de / TraderFox / Börse-Intern (stockstreet.de) · Kurse in EUR, umgerechnet zu 1,1536 USD/EUR<br>
   Keine Anlageberatung. Alle Einstiegs-, Stop- und Zielmarken sind Vorschläge auf Basis öffentlicher Daten — die Entscheidung liegt bei dir.
 </footer>
 
 <script>
 const cash=document.getElementById('cash'), risk=document.getElementById('risk');
-
 function calc(){
   const c=parseFloat(cash.value)||0, r=parseFloat(risk.value)||0;
   const riskEur=c*r/100;
@@ -450,11 +440,8 @@ function calc(){
   save();
 }
 cash.oninput=calc; risk.oninput=calc;
-
-/* TRADE LOG */
 let log=[];
 try{ log=JSON.parse(localStorage.getItem('tr_log')||'[]'); }catch(e){ log=[]; }
-
 function renderLog(){
   const b=document.getElementById('logBody');
   if(!log.length){ b.innerHTML='<tr><td colspan="5" class="empty">Noch keine Trades erfasst</td></tr>'; }
@@ -481,9 +468,7 @@ function addLog(){
   save(); renderLog();
 }
 function delLog(i){ log.splice(i,1); save(); renderLog(); }
-
-/* CLUSTER */
-const themes={'CACI':'Defense','SFC':'Energie','ZEBRA':'KI/Tech','COHERENT':'KI/Tech','COHR':'KI/Tech',
+const themes={'CACI':'Defense','ATI':'Defense','SFC':'Energie','ZEBRA':'KI/Tech','COHERENT':'KI/Tech','COHR':'KI/Tech',
 'PALANTIR':'KI/Tech','PLTR':'KI/Tech','DIGITAL':'KI/Tech','APPS':'KI/Tech','NVIDIA':'KI/Tech','NVDA':'KI/Tech',
 'LUMENTUM':'KI/Tech','LITE':'KI/Tech'};
 function checkCluster(){
@@ -495,12 +480,11 @@ function checkCluster(){
   const hit=Object.entries(cnt).filter(([,v])=>v>2);
   const w=document.getElementById('warn');
   if(hit.length){
-    w.innerHTML='⚠ <b>Cluster-Risiko:</b> '+hit.map(([k,v])=>`${v} Positionen im Thema „${k}"`).join(', ')+
+    w.innerHTML='⚠ <b>Cluster-Risiko:</b> '+hit.map(([k,v])=>`${v} Positionen im Thema „${k}“`).join(', ')+
     ' — diese Werte fallen im Zweifel gemeinsam. Regel 6: max. 2 pro Thema.';
     w.classList.add('on');
   } else w.classList.remove('on');
 }
-
 function save(){
   try{
     localStorage.setItem('tr_log',JSON.stringify(log));
@@ -512,7 +496,6 @@ try{
   if(localStorage.getItem('tr_cash')) cash.value=localStorage.getItem('tr_cash');
   if(localStorage.getItem('tr_risk')) risk.value=localStorage.getItem('tr_risk');
 }catch(e){}
-
 calc(); renderLog();
 </script>
 </body>
