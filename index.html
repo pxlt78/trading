@@ -14,31 +14,20 @@
   .stand{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:.75rem;color:var(--muted)}
   .stand b{color:var(--text)}
   .main{padding:22px 28px;max-width:1400px;margin:0 auto}
-
-  /* PORTFOLIO BAR */
   .pf{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:14px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
   .pf-item{display:flex;flex-direction:column;gap:3px}
   .pf-label{font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}
   .pf-val{font-size:1.05rem;font-weight:700}
-  .pf input{background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);
-  padding:5px 9px;font-size:1rem;font-weight:700;width:120px;font-family:inherit}
+  .pf input{background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:5px 9px;font-size:1rem;font-weight:700;width:120px;font-family:inherit}
   .pf input:focus{outline:none;border-color:var(--blue)}
   .pf-sep{width:1px;height:34px;background:var(--border)}
-
-  .warn{background:rgba(255,77,109,.08);border:1px solid rgba(255,77,109,.3);border-radius:10px;
-  padding:11px 16px;margin-bottom:20px;font-size:.8rem;color:var(--red);display:none}
+  .warn{background:rgba(255,77,109,.08);border:1px solid rgba(255,77,109,.3);border-radius:10px;padding:11px 16px;margin-bottom:20px;font-size:.8rem;color:var(--red);display:none}
   .warn.on{display:block}
-
-  /* COLUMNS */
   .grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:24px}
-  .col-title{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;
-  letter-spacing:.1em;margin-bottom:12px;padding-bottom:9px;border-bottom:2px solid var(--border)}
+  .col-title{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;padding-bottom:9px;border-bottom:2px solid var(--border)}
   .col-title .dot{width:8px;height:8px;border-radius:50%}
   .col-count{margin-left:auto;color:var(--muted);font-weight:600}
-
-  /* CARD */
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:11px;
-  border-left:3px solid var(--border)}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:11px;border-left:3px solid var(--border)}
   .card.go{border-left-color:var(--green)}
   .card.lvl{border-left-color:var(--yellow)}
   .card.evt{border-left-color:var(--blue)}
@@ -52,33 +41,23 @@
   .co{font-size:.7rem;color:var(--muted);margin-bottom:9px}
   .px{font-size:1.15rem;font-weight:700;margin-bottom:9px}
   .px small{font-size:.68rem;color:var(--muted);font-weight:400;margin-left:5px}
-
-  /* SETUP GRID */
-  .setup{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);
-  border-radius:7px;overflow:hidden;margin-bottom:9px}
+  .setup{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:7px;overflow:hidden;margin-bottom:9px}
   .su{background:var(--surface2);padding:6px 8px}
   .su-l{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
   .su-v{font-size:.85rem;font-weight:700;margin-top:1px}
   .crv-ok{color:var(--green)} .crv-mid{color:var(--yellow)} .crv-bad{color:var(--red)}
-
-  .size{background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.22);border-radius:7px;
-  padding:7px 9px;margin-bottom:9px;font-size:.72rem}
+  .size{background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.22);border-radius:7px;padding:7px 9px;margin-bottom:9px;font-size:.72rem}
   .size b{color:var(--blue);font-size:.85rem}
   .note{font-size:.71rem;color:var(--muted);line-height:1.55;border-top:1px solid var(--border);padding-top:8px}
-  .trigger{font-size:.68rem;color:var(--yellow);margin-bottom:8px;padding:5px 8px;background:rgba(251,191,36,.07);
-  border-radius:5px;border:1px solid rgba(251,191,36,.2)}
-
-  /* BOTTOM */
+  .trigger{font-size:.68rem;color:var(--yellow);margin-bottom:8px;padding:5px 8px;background:rgba(251,191,36,.07);border-radius:5px;border:1px solid rgba(251,191,36,.2)}
   .bot{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
   .panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px}
   table{width:100%;border-collapse:collapse;font-size:.75rem}
-  th{text-align:left;color:var(--muted);font-size:.63rem;text-transform:uppercase;letter-spacing:.07em;
-  padding:6px 7px;border-bottom:1px solid var(--border);font-weight:600}
+  th{text-align:left;color:var(--muted);font-size:.63rem;text-transform:uppercase;letter-spacing:.07em;padding:6px 7px;border-bottom:1px solid var(--border);font-weight:600}
   td{padding:7px;border-bottom:1px solid var(--border)}
   tr:last-child td{border-bottom:none}
   .log-in{display:grid;grid-template-columns:1fr 68px 68px 78px 34px;gap:6px;margin-top:11px}
-  .log-in input{background:var(--surface2);border:1px solid var(--border);border-radius:5px;color:var(--text);
-  padding:6px 8px;font-size:.73rem;font-family:inherit;min-width:0}
+  .log-in input{background:var(--surface2);border:1px solid var(--border);border-radius:5px;color:var(--text);padding:6px 8px;font-size:.73rem;font-family:inherit;min-width:0}
   .log-in input:focus{outline:none;border-color:var(--blue)}
   .log-in button{background:var(--blue);border:none;border-radius:5px;color:#0d0f14;font-weight:700;cursor:pointer;font-size:.9rem}
   .del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.85rem;padding:0 3px}
@@ -87,34 +66,6 @@
   .rules{font-size:.73rem;color:var(--muted);line-height:1.95}
   .rules b{color:var(--text)}
   footer{padding:15px 28px;border-top:1px solid var(--border);font-size:.67rem;color:#4a5070;text-align:center;margin-top:24px}
-
-  /* MARKTAMPEL */
-  .ampel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:14px}
-  .ampel-hd{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;color:var(--muted)}
-  .ampel-src{font-weight:400;font-size:.64rem;margin-left:auto;color:var(--muted)}
-  .ampel-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-  .ampel-item{display:flex;gap:9px;align-items:flex-start}
-  .ampel-lbl{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:var(--text)}
-  .ampel-txt{font-size:.68rem;color:var(--muted);line-height:1.5}
-  .dot-g{width:9px;height:9px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:2px}
-  .dot-y{width:9px;height:9px;border-radius:50%;background:var(--yellow);flex-shrink:0;margin-top:2px}
-  .dot-r{width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:2px}
-
-  /* TOP-CRV */
-  .topcrv{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 20px;margin-bottom:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-  .topcrv-title{font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);white-space:nowrap;margin-right:4px}
-  .crv-badge{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 13px;min-width:150px}
-  .crv-b-rank{font-size:.6rem;color:var(--muted);margin-bottom:2px}
-  .crv-b-tk{font-size:.88rem;font-weight:700}
-  .crv-b-cat{font-size:.62rem;color:var(--muted);margin:2px 0}
-  .crv-b-val{font-size:1.05rem;font-weight:700;color:var(--green)}
-  .crv-b-status{font-size:.6rem;color:var(--yellow);margin-top:1px}
-
-  /* SPEKULATIV */
-  .spek{background:var(--surface);border:1px solid rgba(167,139,250,.25);border-radius:12px;padding:16px 20px;margin-bottom:24px}
-  .spek-hd{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--purple);margin-bottom:12px}
-  .spek-empty{color:var(--muted);font-size:.75rem;text-align:center;padding:18px 0;font-style:italic}
-  .card.spk{border-left-color:var(--purple)}
 </style>
 </head>
 <body>
@@ -124,57 +75,12 @@
     <span style="font-size:1.25rem">📡</span><h1>Trading Radar</h1>
   </div>
   <div style="display:flex;gap:11px;align-items:center">
-    <span class="stand">Stand: <b id="stand">13.08.2026</b> · Quelle: aktienmagazin.de / Börse-Intern / TraderFox</span>
-    <span class="stand">EUR/USD <b>1,1538</b></span>
+    <span class="stand">Stand: <b id="stand">18.08.2026</b> · Quelle: aktienmagazin.de / TraderFox / Börse-Intern</span>
+    <span class="stand">EUR/USD <b>1,1550</b></span>
   </div>
 </header>
 
 <div class="main">
-
-  <!-- MARKTAMPEL -->
-  <div class="ampel">
-    <div class="ampel-hd">
-      📊 Markt-Ampel
-      <span class="ampel-src">Quelle: Börse-Intern (Sven Weisenhaus), Ausgabe 11.08.2026</span>
-    </div>
-    <div class="ampel-grid">
-      <div class="ampel-item">
-        <div class="dot-g"></div>
-        <div>
-          <div class="ampel-lbl">Markt-Klima</div>
-          <div class="ampel-txt">S&amp;P 500 Gewinnwachstum +50,4% im Q2 2026 — 86% der Unternehmen übertrafen Erwartungen. Umsatzwachstum +15%.</div>
-        </div>
-      </div>
-      <div class="ampel-item">
-        <div class="dot-y"></div>
-        <div>
-          <div class="ampel-lbl">Zinserwartung</div>
-          <div class="ampel-txt">Fed-Zinserhöhungswahrsch. 52% für 16.9. — schwache Jobs-Daten dämpften, Ölpreisanstieg heizte wieder an.</div>
-        </div>
-      </div>
-      <div class="ampel-item">
-        <div class="dot-r"></div>
-        <div>
-          <div class="ampel-lbl">Ölpreis / Geopolitik</div>
-          <div class="ampel-txt">Brent +15% in 5 Handelstagen, +7% allein gestern. Hormus-Meerenge trotz Trump weiterhin Risikozone.</div>
-        </div>
-      </div>
-      <div class="ampel-item">
-        <div class="dot-r"></div>
-        <div>
-          <div class="ampel-lbl">Anleiherenditen</div>
-          <div class="ampel-txt">10-jährige US-Treasuries steigen weiter — steigende Renditen machen Aktien relativ teurer.</div>
-        </div>
-      </div>
-      <div class="ampel-item">
-        <div class="dot-y"></div>
-        <div>
-          <div class="ampel-lbl">Profi-Signal</div>
-          <div class="ampel-txt">Börse-Intern Premium hält ~75% Cash (steigend). Long-Bias, aber Risikoreduktion via Positionsgröße empfohlen.</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- PORTFOLIO -->
   <div class="pf">
@@ -209,35 +115,76 @@
     <div class="pf-sep"></div>
     <div class="pf-item">
       <span class="pf-label">Handelbar heute</span>
-      <span class="pf-val" style="color:var(--green)">1 Kandidat</span>
+      <span class="pf-val" style="color:var(--muted)">0 Kandidaten</span>
     </div>
   </div>
 
   <div class="warn" id="warn"></div>
 
-  <!-- TOP-CRV-LEISTE -->
-  <div class="topcrv">
-    <span class="topcrv-title">🏆 Top 3 nach CRV (global, alle Kategorien)</span>
-    <div class="crv-badge">
-      <div class="crv-b-rank">#1 · Warten auf Level</div>
-      <div class="crv-b-tk">Lumentum LITE</div>
-      <div class="crv-b-cat">Momentum · KI-Photonik</div>
-      <div class="crv-b-val">CRV 2,5</div>
-      <div class="crv-b-status">Trigger: Pullback 680–700 €</div>
+  <!-- MARKTAMPEL -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-bottom:14px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+      <span style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)">🚦 Marktampel</span>
+      <span style="font-size:.63rem;color:var(--muted)">Quelle: Börse-Intern 13.–14.08.2026 / CNBC / Babypips 12.08.2026</span>
     </div>
-    <div class="crv-badge">
-      <div class="crv-b-rank">#2 · Warten auf Level</div>
-      <div class="crv-b-tk">Coherent COHR</div>
-      <div class="crv-b-cat">Rebound · Post-Earnings</div>
-      <div class="crv-b-val">CRV 2,4</div>
-      <div class="crv-b-status">Trigger: Stabilisierung 295–305 €</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:160px;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+          <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;">Markt-Klima</span>
+        </div>
+        <div style="font-size:.68rem;color:var(--muted);line-height:1.5;">S&amp;P 500 Gewinnwachstum Q2 +50,4 %; STOXX 600 +19,1 % — Kurssgewinne fundamental breit untermauert, kein KI-Hype ohne Substanz.</div>
+      </div>
+      <div style="flex:1;min-width:160px;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow);flex-shrink:0"></div>
+          <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;">Zinserwartung</span>
+        </div>
+        <div style="font-size:.68rem;color:var(--muted);line-height:1.5;">Fed-Leitzins 3,50–3,75 % stabil; Juli-CPI +3,4 % YoY (rückläufig); Markt preist Sep-Erhöhung zu 42 % ein — Richtung bleibt unklar, 1 Senkung für 2026 erwartet.</div>
+      </div>
+      <div style="flex:1;min-width:160px;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow);flex-shrink:0"></div>
+          <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;">Öl / Geopolitik</span>
+        </div>
+        <div style="font-size:.68rem;color:var(--muted);line-height:1.5;">Brent 88,31 USD (17.08.); Straße von Hormus laut Trump offen, internationale Behörden widersprechen — Verhandlungen weiter im Deadlock.</div>
+      </div>
+      <div style="flex:1;min-width:160px;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--red);flex-shrink:0"></div>
+          <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;">Anleiherenditen</span>
+        </div>
+        <div style="font-size:.68rem;color:var(--muted);line-height:1.5;">10-j. US-Rendite 4,70 %; Sell-America-Trade bei Anleihen aktiv; ausländische Notenbanken reduzieren US-Käufe — wachsende Konkurrenz zu Aktien.</div>
+      </div>
+      <div style="flex:1;min-width:160px;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow);flex-shrink:0"></div>
+          <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;">Profi-Signal</span>
+        </div>
+        <div style="font-size:.68rem;color:var(--muted);line-height:1.5;">Allstar-Trader + Hightech-Trader nehmen Gewinne mit (Befesa +8,8 %, Vestas +22 %); Bear-Keil EuroSTOXX50 sichtbar — Saisonalität mahnt bis Oktober zur Vorsicht.</div>
+      </div>
     </div>
-    <div class="crv-badge">
-      <div class="crv-b-rank">#3 · Handelbar jetzt</div>
-      <div class="crv-b-tk">SFC Energy F3C</div>
-      <div class="crv-b-cat">Rebound · Nebenwert</div>
-      <div class="crv-b-val">CRV 2,2</div>
-      <div class="crv-b-status">Limit-Order zwingend</div>
+  </div>
+
+  <!-- TOP-CRV LEISTE -->
+  <div style="background:linear-gradient(90deg,rgba(251,191,36,.07) 0%,rgba(30,35,48,0) 100%);border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:12px 20px;margin-bottom:16px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+    <span style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow);white-space:nowrap;">🏆 Top 3 nach CRV <span style="font-size:.6rem;color:var(--muted);font-weight:400;">(global, Handelbar jetzt + Warten auf Level)</span></span>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:.9rem;">🥇</span>
+        <div><div style="font-size:.78rem;font-weight:700;">COHR</div><div style="font-size:.63rem;color:var(--muted);">Rebound · Warten auf Level</div></div>
+        <span style="font-size:.88rem;font-weight:700;color:var(--green);margin-left:5px;">CRV 2,6</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:.9rem;">🥈</span>
+        <div><div style="font-size:.78rem;font-weight:700;">SOFI</div><div style="font-size:.63rem;color:var(--muted);">Turnaround · Warten auf Level</div></div>
+        <span style="font-size:.88rem;font-weight:700;color:var(--green);margin-left:5px;">CRV 2,5</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:.9rem;">🥉</span>
+        <div><div style="font-size:.78rem;font-weight:700;">CACI</div><div style="font-size:.63rem;color:var(--muted);">Momentum · Warten auf Level</div></div>
+        <span style="font-size:.88rem;font-weight:700;color:var(--yellow);margin-left:5px;">CRV 2,0</span>
+      </div>
     </div>
   </div>
 
@@ -247,24 +194,10 @@
     <!-- HANDELBAR -->
     <div>
       <div class="col-title"><div class="dot" style="background:var(--green)"></div>
-        <span style="color:var(--green)">Handelbar jetzt</span><span class="col-count">1</span></div>
-
-      <div class="card go">
-        <div class="c-top"><span class="tk">SFC Energy</span><span class="cat reb">Rebound</span></div>
-        <div class="co">F3C.DE · Brennstoffzellen · Nebenwert</div>
-        <div class="px">20,25 € <small>Xetra, nativ EUR</small></div>
-        <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">20,25 €</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">18,80 €</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">23,50 €</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,2</div></div>
-        </div>
-        <div class="size" data-entry="20.25" data-stop="18.80">
-          Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
-        </div>
-        <div class="note">Prognose angehoben auf 163–175 Mio € Umsatz nach Rekordauftrag Ukraine (42,7 Mio €). Berenberg-Ziel 24 €.
-        Kurs stieg seit 10.08. — Stop auf 18,80 € nachgezogen (unter Ausbruchniveau). CRV bleibt 2,2.
-        <b style="color:var(--yellow)">Nebenwert → Limit-Order zwingend, Spread beachten.</b></div>
+        <span style="color:var(--green)">Handelbar jetzt</span><span class="col-count">0</span></div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;text-align:center;">
+        <div style="font-size:1.6rem;margin-bottom:9px;">⏸</div>
+        <div style="font-size:.73rem;color:var(--muted);line-height:1.65;">Kein Kandidat mit CRV ≥ 1,5<br>zum aktuellen Kurs handelbar.<br><span style="font-size:.66rem;color:#4a5070;margin-top:4px;display:block;">SFC Energy: CRV auf 1,34 gefallen.<br>Rücksetzer bei COHR / SOFI / CACI abwarten.</span></div>
       </div>
     </div>
 
@@ -274,47 +207,45 @@
         <span style="color:var(--yellow)">Warten auf Level</span><span class="col-count">4</span></div>
 
       <div class="card lvl">
-        <div class="c-top"><span class="tk">Lumentum</span><span class="cat mom">Momentum</span></div>
-        <div class="co">LITE · KI-Photonik / Optische Verbindungen</div>
-        <div class="px">719 € <small>~$830 · NEU 13.08.</small></div>
-        <div class="trigger">⏳ Trigger: Pullback in Zone 680–700 €</div>
+        <div class="c-top"><span class="tk">Coherent</span><span class="cat reb">Rebound</span></div>
+        <div class="co">COHR · Photonik / KI-Infrastruktur</div>
+        <div class="px">282,00 € <small>$325,83 · Post-Earnings 14.08.</small></div>
+        <div class="trigger">⏳ Trigger: Stabilisierung unter 285 €, dann Einstieg</div>
         <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">690,00 €</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">625,00 €</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">850,00 €</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,5</div></div>
+          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">278,00 €</div></div>
+          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">258,00 €</div></div>
+          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">330,00 €</div></div>
+          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,6</div></div>
         </div>
-        <div class="size" data-entry="690" data-stop="625">
+        <div class="size" data-entry="278" data-stop="258">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Umsatz +109% YoY auf über 1 Mrd. USD (Trader-Zeitung 12.08.). Adj. EPS $3,23 — Analystenziel Ø ~986 USD (~854 €, Spanne $550–$1.270).
-        Intraday-Spike 12.08. bis $951 (+16%) → Hinterherlaufen verboten. Analyst-Konsens: 82% Buy.
-        <b style="color:var(--red)">Cluster-Achtung:</b> Gleiches Thema wie Coherent (KI/Photonik) — max. 2 Positionen im Thema.</div>
+        <div class="note">Zahlen 12.08. klar besser als Erwartung: Q4-Umsatz 2,045 Mrd. $ (beat), EPS 1,74 $ vs. 1,65 $ erwartet. Trotzdem Sell-the-News — Kurs fiel von 327 € (pre-earnings) auf ~282 €.
+        Datacenter-Segment und NVIDIA-Liefervertrag bleiben intakt. <b style="color:var(--yellow)">Erst nach Stabilisierung einsteigen — kein Nachkaufen in fallende Kurse.</b></div>
       </div>
 
       <div class="card lvl">
-        <div class="c-top"><span class="tk">Coherent</span><span class="cat reb">Rebound</span></div>
-        <div class="co">COHR · Photonik / KI-Infrastruktur</div>
-        <div class="px">308 € <small>$355,72 · Post-Earnings 13.08.</small></div>
-        <div class="trigger">⏳ Trigger: Stabilisierung über 295–305 €</div>
+        <div class="c-top"><span class="tk">SoFi Technologies</span><span class="cat tur">Turnaround</span></div>
+        <div class="co">SOFI · Fintech / Digitalbank · NEU 18.08.</div>
+        <div class="px">16,03 € <small>$18,51 · Stand 13.08.</small></div>
+        <div class="trigger">⏳ Trigger: Rücksetzer in Zone 14,50–15,00 €</div>
         <div class="setup">
-          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">305,00 €</div></div>
-          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">275,00 €</div></div>
-          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">375,00 €</div></div>
-          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,4</div></div>
+          <div class="su"><div class="su-l">Einstieg</div><div class="su-v">14,70 €</div></div>
+          <div class="su"><div class="su-l">Stop</div><div class="su-v" style="color:var(--red)">13,00 €</div></div>
+          <div class="su"><div class="su-l">Ziel</div><div class="su-v" style="color:var(--green)">19,00 €</div></div>
+          <div class="su"><div class="su-l">CRV</div><div class="su-v crv-ok">2,5</div></div>
         </div>
-        <div class="size" data-entry="305" data-stop="275">
+        <div class="size" data-entry="14.70" data-stop="13.00">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Q4-Zahlen 12.08. geschlagen: Umsatz $2,05B (+34% YoY, beat), EPS $1,74 (beat $1,65 est). NVIDIA-Partnerschaft, Rekord-Auftragsbestand bis 2028.
-        Erratische Reaktion: +8% intraday, dann −7% nach Börsenschluss. Fundamentals intakt — Einstieg erst nach Stabilisierung.
-        <b style="color:var(--red)">Cluster mit Lumentum (KI/Photonik) — max. 2 Positionen.</b></div>
+        <div class="note">Q2-Earnings (29.07.): Umsatz +40 % YoY, EPS-Beat, FY26-Guidance erhöht (32–35 % Wachstum, 33–34 % EBITDA-Marge). Chartanalyse aktienmagazin.de (14.08.): „Rekordquartal befeuert den Turnaround". Seit Earnings +18 % — <b style="color:var(--red)">nicht auf dem Hoch kaufen.</b>
+        Gegenargument: Steigende Realzinsen könnten Kreditnachfrage drücken. Zacks-Rang nicht geprüft — vor Einstieg nachholen.</div>
       </div>
 
       <div class="card lvl">
         <div class="c-top"><span class="tk">CACI Intl.</span><span class="cat mom">Momentum</span></div>
         <div class="co">CACI · US Defense &amp; IT</div>
-        <div class="px">558 € <small>$644</small></div>
+        <div class="px">557,00 € <small>$644,43</small></div>
         <div class="trigger">⏳ Trigger: Rücksetzer in Zone 530–540 €</div>
         <div class="setup">
           <div class="su"><div class="su-l">Einstieg</div><div class="su-v">535,00 €</div></div>
@@ -325,14 +256,14 @@
         <div class="size" data-entry="535" data-stop="508">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Zahlen über Erwartung, FY27-Guidance angehoben, JPMorgan-Ziel 715 $ (~620 €). Kurs stieg leicht auf 558 € — Einstiegsniveau noch nicht erreicht.
-        Zacks-Gegenlesen nicht möglich (Quelle nicht erreichbar). <b>Nicht auf dem Hoch kaufen.</b></div>
+        <div class="note">Stärkster Kandidat fundamental: Zahlen über Erwartung, FY27-Guidance angehoben, Jefferies-Ziel 700 $ (≈606 €). Keine neuen Signale seit 07.08. — Story intakt, aber Kurs (~557 €) noch weit über Einstiegszone.
+        <b>Pullback in 530–540 € Zone weiter abwarten.</b></div>
       </div>
 
       <div class="card lvl">
         <div class="c-top"><span class="tk">Digital Turbine</span><span class="cat tur">Turnaround</span></div>
         <div class="co">APPS · Mobile Software</div>
-        <div class="px">11,54 € <small>$13,31</small></div>
+        <div class="px">11,29 € <small>$13,04 · –9,4 % am 11.08.</small></div>
         <div class="trigger">⏳ Trigger: Konsolidierung, Zone 9,50–10,00 €</div>
         <div class="setup">
           <div class="su"><div class="su-l">Einstieg</div><div class="su-v">9,80 €</div></div>
@@ -343,8 +274,7 @@
         <div class="size" data-entry="9.80" data-stop="8.75">
           Position: <b class="pos">–</b> · Einsatz <span class="cap">–</span>
         </div>
-        <div class="note">Q1 FY27 (Aug 4): Umsatz +27% YoY ($166 Mio), Analystenkonsens 3× Analysten Avg-Target $15,17 — fundamental stärker als der Kurs zeigt.
-        Kurs aktuell 11,54 € — noch 15% über dem Einstiegsniveau. <b style="color:var(--red)">Konsolidierung abwarten.</b> Hohe Vola → breiter Stop.</div>
+        <div class="note">Fundamental sauberster Turnaround: Umsatz +27 %, adj. EBITDA +69 %, adj. EPS +217 %, Guidance erhöht. 52-W-Hoch 14,27 $ am 11.08. — seitdem leichte Konsolidierung auf 13,04 $. <b style="color:var(--red)">Einstiegszone 9,50–10,00 € noch weit entfernt — warten.</b> Hohe Vola → breiter Stop → kleinere Position.</div>
       </div>
     </div>
 
@@ -352,41 +282,57 @@
     <div>
       <div class="col-title"><div class="dot" style="background:var(--blue)"></div>
         <span style="color:var(--blue)">Warten auf Termin</span><span class="col-count">0</span></div>
-      <div style="color:var(--muted);font-size:.73rem;padding:12px 0;text-align:center">
-        Kein Kandidat mit anstehendem Katalysator-Datum.
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;text-align:center;">
+        <div style="font-size:1.6rem;margin-bottom:9px;">✅</div>
+        <div style="font-size:.73rem;color:var(--muted);line-height:1.65;">Alle Termine abgearbeitet.<br><span style="font-size:.66rem;color:#4a5070;margin-top:4px;display:block;">COHR Earnings 12.08. ➜ Beat, aber Sell-the-News.<br>Setup neu bewertet → jetzt „Warten auf Level".</span></div>
       </div>
     </div>
 
     <!-- KEIN SETUP -->
     <div>
       <div class="col-title"><div class="dot" style="background:var(--muted)"></div>
-        <span style="color:var(--muted)">Kein Setup</span><span class="col-count">2</span></div>
+        <span style="color:var(--muted)">Kein Setup</span><span class="col-count">3</span></div>
+
+      <div class="card no">
+        <div class="c-top"><span class="tk">SFC Energy</span><span class="cat reb">Rebound</span></div>
+        <div class="co">F3C.DE · Brennstoffzellen · Nebenwert</div>
+        <div class="px">20,40 € <small>Xetra, korrigiert 17.08.</small></div>
+        <div class="note"><b style="color:var(--red)">CRV unter Schwelle:</b> Bei aktuellem Kurs 20,40 € ergibt sich CRV = (24,30−20,40)÷(20,40−17,50) = 1,34 — unter 1,5.
+        Aufwärtstrend und Story (Ukraine-Aufträge, Analystenrating Strong Buy, Ø-Ziel 27,20 €) unverändert intakt. <b style="color:var(--yellow)">Rücksetzer unter 19,50 € abwarten — dann CRV wieder ≥ 1,5.</b> Limit-Order zwingend.</div>
+      </div>
 
       <div class="card no">
         <div class="c-top"><span class="tk">Zebra Technologies</span><span class="cat mom">Momentum</span></div>
         <div class="co">ZBRA · Enterprise Mobility</div>
-        <div class="px">~313 € <small>Stand 10.08. · Kurs unsicher</small></div>
-        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> Kurs über allen Analystenzielen (Citi 306 $, Wolfe 317 $ vs. Kurs ~361 $). +36% in sieben Handelstagen.
-        Zahlen top (adj. EPS +76%, Guidance +13%) — bereits im Kurs. Kein vernünftiges CRV konstruierbar.</div>
+        <div class="px">312,59 € <small>$361,38</small></div>
+        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> Kurs über allen Analystenzielen (Citi 306 $, Wolfe 317 $). +36 % in sieben Handelstagen eingepreist. Adj. EPS +76 %, Guidance +13 % — aber bereits vollständig im Kurs. Kein vernünftiges CRV konstruierbar.</div>
       </div>
 
       <div class="card no">
         <div class="c-top"><span class="tk">Palantir</span><span class="cat mom">Momentum</span></div>
         <div class="co">PLTR · AI Analytics</div>
         <div class="px" style="color:var(--muted)">—</div>
-        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> KGV ~147. Stop entweder so eng, dass normales Rauschen ihn auslöst, oder so weit, dass das Risiko die Positionsgröße auffrisst.
-        Wachstum stark — Setup trotzdem nicht handelbar.</div>
+        <div class="note"><b style="color:var(--red)">Abgelehnt:</b> KGV ~147. aktienmagazin (14.08.) bestätigt starke Q-Zahlen — ändert nichts: Stop entweder zu eng (normales Rauschen löst aus) oder zu weit (Risiko frisst Position). Wachstum stark — Setup nicht handelbar.</div>
       </div>
     </div>
   </div>
 
-  <!-- SPEKULATIV-SEKTION -->
-  <div class="spek">
-    <div class="spek-hd">
-      <span style="font-size:.9rem">⚡</span> Spekulativ (Small Caps · Max. 0,25% Risiko)
+  <!-- SPEKULATIV SEKTION -->
+  <div style="background:var(--surface);border:1px solid rgba(251,146,60,.3);border-radius:12px;padding:16px 20px;margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:9px;margin-bottom:12px;">
+      <div style="width:8px;height:8px;border-radius:50%;background:var(--orange)"></div>
+      <span style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--orange)">⚠ Spekulativ — Small Caps / High Risk</span>
+      <span style="margin-left:auto;font-size:.63rem;color:var(--muted);">Max. 0,25 % Risiko pro Position · Limit-Order zwingend</span>
     </div>
-    <div class="spek-empty">
-      Heute kein Kandidat aufgenommen — keine verfügbare Position hat alle 5 Prüfkriterien (reales Umsatzgeschäft, konkreter Katalysator, aktuelles Analyst-Buy, ausreichende Liquidität, kein >20%-Sprung) gleichzeitig erfüllt. Quellen Benzinga/MarketBeat waren heute nicht erreichbar.
+    <div style="background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:14px 16px;text-align:center;">
+      <div style="font-size:1.2rem;margin-bottom:7px;">🔍</div>
+      <div style="font-size:.72rem;color:var(--muted);line-height:1.75;">
+        Heute kein Kandidat mit plausiblem Setup — Sektion bewusst leer gelassen.<br>
+        <span style="font-size:.67rem;color:#4a5070;">
+          <b style="color:var(--muted);">LUNR</b> (Intuitive Machines): $600M-Auftrag 17.08. bestätigt Story (Backlog 1,8 Mrd. $, Q2-Umsatz 206 Mio. $) — aber Aktie bereits +45 % seit Monatsbeginn, noch defizitär. Kein Setup.<br>
+          <b style="color:var(--muted);">AEHR</b> (Aehr Test Systems): Jefferies-Buy nach neuem Auftrag (14.08., 35 % Aufwärtspotenzial) — zu wenig eigene Datenlage für seriöse Einschätzung. Weiter beobachten.
+        </span>
+      </div>
     </div>
   </div>
 
@@ -426,7 +372,7 @@
 </div>
 
 <footer>
-  Trading Radar · Ideenquelle: aktienmagazin.de / TraderFox / Börse-Intern (stockstreet.de) · Kurse in EUR, umgerechnet zu 1,1538 USD/EUR<br>
+  Trading Radar · Ideenquelle: aktienmagazin.de / TraderFox · Marktklima: stockstreet.de (Börse-Intern) · Kurse in EUR, umgerechnet zu 1,1550 USD/EUR<br>
   Keine Anlageberatung. Alle Einstiegs-, Stop- und Zielmarken sind Vorschläge auf Basis öffentlicher Daten — die Entscheidung liegt bei dir.
 </footer>
 
@@ -451,7 +397,6 @@ function calc(){
 }
 cash.oninput=calc; risk.oninput=calc;
 
-/* TRADE LOG */
 let log=[];
 try{ log=JSON.parse(localStorage.getItem('tr_log')||'[]'); }catch(e){ log=[]; }
 
@@ -482,10 +427,9 @@ function addLog(){
 }
 function delLog(i){ log.splice(i,1); save(); renderLog(); }
 
-/* CLUSTER */
 const themes={'CACI':'Defense','SFC':'Energie','ZEBRA':'KI/Tech','COHERENT':'KI/Tech','COHR':'KI/Tech',
 'PALANTIR':'KI/Tech','PLTR':'KI/Tech','DIGITAL':'KI/Tech','APPS':'KI/Tech','NVIDIA':'KI/Tech','NVDA':'KI/Tech',
-'LUMENTUM':'KI/Tech','LITE':'KI/Tech'};
+'SOFI':'Fintech','LUNR':'Space','AEHR':'Halbleiter'};
 function checkCluster(){
   const cnt={};
   log.forEach(t=>{
@@ -495,7 +439,7 @@ function checkCluster(){
   const hit=Object.entries(cnt).filter(([,v])=>v>2);
   const w=document.getElementById('warn');
   if(hit.length){
-    w.innerHTML='⚠ <b>Cluster-Risiko:</b> '+hit.map(([k,v])=>`${v} Positionen im Thema „${k}"`).join(', ')+
+    w.innerHTML='⚠ <b>Cluster-Risiko:</b> '+hit.map(([k,v])=>`${v} Positionen im Thema „${k}“`).join(', ')+
     ' — diese Werte fallen im Zweifel gemeinsam. Regel 6: max. 2 pro Thema.';
     w.classList.add('on');
   } else w.classList.remove('on');
